@@ -8,7 +8,7 @@ def task_5_2():
     def check_wall():   # поверяем есть ли стена снизу, иначе "стоп"
         while wall_is_beneath() == True:
             move_right()
-    move_right()
+    move_right()        # делаем первый шаг без проверки наличия стены
     check_wall()
 
 
