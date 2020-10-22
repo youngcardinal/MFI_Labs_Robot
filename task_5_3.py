@@ -4,7 +4,7 @@ from pyrob.api import *
 
 
 @task
-def task_5_2():
+def task_5_3():
     def check_wall():   # поверяем есть ли стена снизу, иначе "стоп"
         while wall_is_beneath() == True:
             move_right()
