@@ -5,14 +5,14 @@ from pyrob.api import *
 
 @task
 def task_1_2():
-    def check_fill():
-        if cell_is_filled() == False:           # проверяем закрашена ли клетка
-            fill_cell()
-    for i in range(4):
-        check_fill()
-        move_right()
-        check_fill()
-        move_down()
+    move_right()
+    move_down()
+    move_right()
+    move_down()
+    fill_cell()
+    move_right()
+    move_down()
+    move_right()
 
 
 if __name__ == '__main__':
