@@ -5,12 +5,13 @@ from pyrob.api import *
 
 @task
 def task_8_2():
-    def check_fill():
-        if cell_is_filled() == False:           # проверяем закрашена ли клетка
+    def check_wall_above():
+        if not wall_is_above():           # проверяем есть ли стена сверху
             fill_cell()
-    while wall_is_on_the_right() == False:      # двигаемся вправо, пока не увидим стену
-        check_fill()
+    while not wall_is_on_the_right():      # двигаемся вправо, пока не увидим стену
+        check_wall_above()
         move_right()
+    check_wall_above()
 
 
 if __name__ == '__main__':
